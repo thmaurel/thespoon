@@ -1,0 +1,12 @@
+<h1><%= @restaurant.name %></h1>
+<h2><%= @restaurant.address %></h2>
+<% if @restaurant.phone %>
+  <p>Phone: <%= @restaurant.phone %></p>
+<% end %>
+<% if @restaurant.rating %>
+  <p>Rating: <%= @restaurant.rating %>/5</p>
+<% end %>
+
+<%= link_to "Edit Restaurant", restaurant_edit_path(@restaurant.id) %>
+
+<%= link_to "Back", restaurants_path %>
